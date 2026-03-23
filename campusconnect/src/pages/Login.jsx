@@ -78,7 +78,7 @@ function Login() {
           </p>
 
           <p style={{ fontSize: "12px", marginTop: "10px" }}>
-            Demo Admin: admin@campus.com / 1234
+            
           </p>
         </div>
       </div>
