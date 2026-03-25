@@ -1,0 +1,89 @@
+.dashboard {
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.dashboard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #f1f5f9;
+  color: #111;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+.card {
+  background: #8dbeef;
+  color: #111;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* feature card */
+.feature-card {
+  width: 45%;
+}
+
+.feature-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-card li {
+  margin: 35px 0;
+}
+
+.feature-card li::before {
+  content: "✔ ";
+  color: #030112;
+}
+
+/* image card */
+.image-card {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-card img {
+  width: 100%;
+  max-width: 250px;
+}
+.page-container {
+  flex: 1; /* 🔥 THIS is important */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.page-container h1 {
+  margin-bottom: 20px;
+}
+
+.page-container p {
+  margin: 10px 0;
+  line-height: 1.6;
+}

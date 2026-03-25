@@ -43,8 +43,8 @@ function Register() {
     <>
       <Header />
 
-      <div style={{ display: "flex", justifyContent: "space-around", marginTop: "60px" }}>
-        
+       <main style={{ flex: 1, display: "flex", alignItems: "center" }}>
+    <div style={{ display: "flex", justifyContent: "space-evenly", width: "100%" }}>
         {/* LEFT SIDE */}
         <div>
           <h2>Join CampusConnect</h2>
@@ -90,7 +90,7 @@ function Register() {
           </p>
         </div>
       </div>
-
+</main>
       <Footer />
     </>
   );

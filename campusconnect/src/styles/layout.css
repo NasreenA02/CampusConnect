@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: linear-gradient(90deg, #6C63FF, #7c73ff);
+  color: white;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+header a:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111827;
+  margin-top: 40px;
+}

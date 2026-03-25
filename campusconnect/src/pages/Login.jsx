@@ -11,10 +11,10 @@ function Login() {
 
   const handleLogin = () => {
 
-    // 🔴 ADMIN LOGIN
+    // ADMIN LOGIN
     if (email === "admin@campus.com" && password === "1234") {
       const adminData = {
-        name: "Admin",
+        name: "Nasreen",
         role: "admin"
       };
 
@@ -23,7 +23,7 @@ function Login() {
       return;
     }
 
-    // 🟢 STUDENT LOGIN
+    // STUDENT LOGIN
     const students = JSON.parse(localStorage.getItem("students")) || [];
 
     const validUser = students.find(
@@ -43,7 +43,7 @@ function Login() {
     <>
       <Header />
 
-      <div style={{ display: "flex", justifyContent: "space-around", marginTop: "60px" }}>
+      <div style={{ display: "flex", justifyContent: "space-evenly", marginTop: "60px",flex:1 }}>
         
         {/* LEFT SIDE */}
         <div>
@@ -77,13 +77,14 @@ function Login() {
             New here? <Link to="/register">Register</Link>
           </p>
 
-          <p style={{ fontSize: "12px", marginTop: "10px" }}>
+          <p style={{ fontSize:"7px", marginTop: "10px", color:"white" }}>
             
           </p>
         </div>
       </div>
 
-      <Footer />
+     <Footer />
+     
     </>
   );
 }

@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import "../styles/pages.css";
 
 function AdminDashboard() {
   const navigate = useNavigate();
@@ -15,61 +16,46 @@ function AdminDashboard() {
     <>
       <Header />
 
-      <div style={{ padding: "30px" }}>
+      <div className="dashboard">
         
         {/* Top Section */}
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div className="dashboard-top">
           <div>
             <h1>Admin Dashboard</h1>
             <h2>Welcome, {user?.name} 👋</h2>
           </div>
 
-          {/* Logout Button */}
           <button onClick={handleLogout}>Logout</button>
         </div>
 
         {/* Cards */}
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
-          gap: "20px",
-          marginTop: "30px"
-        }}>
-
-          <div style={cardStyle}>
+        <div className="card-grid">
+          <div className="card">
             <h3>Manage Complaints</h3>
             <p>View and update complaint status</p>
           </div>
 
-          <div style={cardStyle}>
+          <div className="card">
             <h3>All Requests</h3>
-            <p>Monitor all student activities</p>
+            <p>Monitor student activity</p>
           </div>
 
-          <div style={cardStyle}>
+          <div className="card">
             <h3>Lost & Found Management</h3>
-            <p>Approve and manage item reports</p>
+            <p>Approve item reports</p>
           </div>
 
-          <div style={cardStyle}>
+          <div className="card">
             <h3>System Overview</h3>
             <p>Track platform usage</p>
           </div>
-
         </div>
+
       </div>
 
       <Footer />
     </>
   );
 }
-
-const cardStyle = {
-  border: "1px solid #ccc",
-  padding: "20px",
-  borderRadius: "10px",
-  cursor: "pointer",
-  backgroundColor: "#f9f9f9"
-};
 
 export default AdminDashboard;
