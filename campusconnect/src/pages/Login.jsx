@@ -5,33 +5,18 @@ import Footer from "../components/Footer";
 
 function Login() {
   const navigate = useNavigate();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-
-    // ADMIN LOGIN
     if (email === "admin@campus.com" && password === "1234") {
-      const adminData = {
-        name: "Nasreen",
-        role: "admin"
-      };
-
-      localStorage.setItem("loggedInUser", JSON.stringify(adminData));
+      localStorage.setItem("loggedInUser", JSON.stringify({ name: "Nasreen", role: "admin" }));
       navigate("/admin");
       return;
     }
-
-    // STUDENT LOGIN
     const students = JSON.parse(localStorage.getItem("students")) || [];
-
-    const validUser = students.find(
-      (user) => user.email === email && user.password === password
-    );
-
+    const validUser = students.find((u) => u.email === email && u.password === password);
     if (validUser) {
-      // Save logged-in student
       localStorage.setItem("loggedInUser", JSON.stringify(validUser));
       navigate("/student");
     } else {
@@ -40,53 +25,32 @@ function Login() {
   };
 
   return (
-    <>
+    <div className="page-wrapper">
       <Header />
-
-      <div style={{ display: "flex", justifyContent: "space-evenly", marginTop: "60px",flex:1 }}>
-        
-        {/* LEFT SIDE */}
-        <div>
-          <h2>Welcome Back!</h2>
-          <p>Login to access your dashboard, track complaints and manage lost items.</p>
+      <main className="auth-main">
+        <div className="auth-container">
+          <div className="auth-left">
+            <h2>Welcome Back!</h2>
+            <p>Login to access your dashboard, track complaints and manage lost items.</p>
+          </div>
+          <div className="auth-divider" />
+          <div className="auth-right">
+            <h3>Login</h3>
+            <label className="auth-label">Email</label>
+            <input type="email" placeholder="Enter Email" value={email}
+              onChange={(e) => setEmail(e.target.value)} className="auth-input" />
+            <label className="auth-label">Password</label>
+            <input type="password" placeholder="Enter Password" value={password}
+              onChange={(e) => setPassword(e.target.value)} className="auth-input" />
+            <button className="auth-button" onClick={handleLogin}>Login</button>
+            <p className="auth-link-text">
+              New here? <Link to="/register">Register</Link>
+            </p>
+          </div>
         </div>
-
-        {/* RIGHT SIDE */}
-        <div>
-          <h3>Login</h3>
-
-          <input
-            type="email"
-            placeholder="Enter Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <br /><br />
-
-          <input
-            type="password"
-            placeholder="Enter Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <br /><br />
-
-          <button onClick={handleLogin}>Login</button>
-
-          <p>
-            New here? <Link to="/register">Register</Link>
-          </p>
-
-          <p style={{ fontSize:"7px", marginTop: "10px", color:"white" }}>
-            
-          </p>
-        </div>
-      </div>
-
-     <Footer />
-     
-    </>
+      </main>
+      <Footer />
+    </div>
   );
 }
-
 export default Login;

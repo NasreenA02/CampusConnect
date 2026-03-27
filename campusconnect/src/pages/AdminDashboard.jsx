@@ -13,7 +13,7 @@ function AdminDashboard() {
   };
 
   return (
-    <>
+     <div className="page-wrapper">
       <Header />
 
       <div className="dashboard">
@@ -54,7 +54,7 @@ function AdminDashboard() {
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

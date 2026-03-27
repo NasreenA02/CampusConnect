@@ -14,7 +14,7 @@ import "./styles/components.css";
 function App() {
   return (
     <BrowserRouter>
-      <div className="app-container">
+     
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
@@ -25,7 +25,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/help" element={<Help />} />
         </Routes>
-      </div>
+     
     </BrowserRouter>
   );
 }
