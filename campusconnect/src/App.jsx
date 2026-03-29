@@ -7,6 +7,10 @@ import AdminDashboard from "./pages/AdminDashboard";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Help from "./pages/Help";
+import SubmitComplaint from "./pages/SubmitComplaint";
+import TrackComplaints from "./pages/TrackComplaints";
+import LostFound from "./pages/LostFound";
+import Updates from "./pages/Updates";
 import "./index.css";
 import "./styles/layout.css";
 import "./styles/pages.css";
@@ -24,6 +28,10 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/help" element={<Help />} />
+          <Route path="/submit-complaint" element={<SubmitComplaint />} />
+          <Route path="/track-complaints" element={<TrackComplaints />} />
+          <Route path="/lost-found" element={<LostFound />} />
+          <Route path="/updates" element={<Updates />} />
         </Routes>
      
     </BrowserRouter>

@@ -2,29 +2,57 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  background: linear-gradient(90deg, #6C63FF, #7c73ff);
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #064e3b, #065f46);
   color: white;
-  flex-shrink: 0;        /* ← prevents header from shrinking */
+  flex-shrink: 0;
+  box-shadow: 0 2px 16px rgba(6, 78, 59, 0.3);
+}
+
+header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: white;
 }
 
 header a {
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
-  margin-left: 15px;
-  padding: 8px 15px;
+  margin-left: 8px;
+  padding: 8px 16px;
   border-radius: 20px;
   transition: 0.3s;
+  font-size: 14px;
 }
 
 header a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: #111827;
-  margin-top: auto;      /* ← was 40px, this pushed page over 100vh causing scrollbar */
-  flex-shrink: 0;        /* ← prevents footer from shrinking */
+  padding: 24px 20px;
+  background: #064e3b;
+  color: rgba(255, 255, 255, 0.65);
+  flex-shrink: 0;
+  margin-top: auto;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px;
+    text-align: center;
+  }
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
