@@ -28,7 +28,7 @@ function Register() {
       <main className="auth-main">
         <div className="auth-container">
           <div className="auth-left">
-            <h2>Join CampusConnect</h2>
+            <h2>Join GrievEase</h2>
             <p>Create your account to manage complaints, track lost items, and stay connected.</p>
           </div>
           <div className="auth-divider tall" />

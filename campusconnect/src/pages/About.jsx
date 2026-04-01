@@ -7,8 +7,8 @@ function About() {
     <div className="page-wrapper">
       <Header />
       <div className="page-container">
-        <h1>About CampusConnect</h1>
-        <p>CampusConnect is a smart campus support system designed to help students manage complaints, track issues, and access lost & found services easily.</p>
+        <h1>About GrievEase</h1>
+        <p>GrievEase is a smart campus support system designed to help students manage complaints, track issues, and access lost & found services easily.</p>
         <p>Our goal is to make campus life smoother by providing a centralized platform where students and admins can communicate efficiently.</p>
         <p>Whether it's reporting problems or finding lost items, everything is just a few clicks away.</p>
       </div>

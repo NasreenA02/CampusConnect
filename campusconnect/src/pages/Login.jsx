@@ -9,11 +9,6 @@ function Login() {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    if (email === "admin@campus.com" && password === "1234") {
-      localStorage.setItem("loggedInUser", JSON.stringify({ name: "Nasreen", role: "admin" }));
-      navigate("/admin");
-      return;
-    }
     const students = JSON.parse(localStorage.getItem("students")) || [];
     const validUser = students.find((u) => u.email === email && u.password === password);
     if (validUser) {

@@ -45,7 +45,7 @@ function Home() {
         {/* HERO */}
         <section className="hero-center">
           <p className="hero-badge">🎓 Smart Campus Support</p>
-          <h1 className="hero-title">Campus<span className="gradient-text">Connect</span></h1>
+          <h1 className="hero-title">Griev<span className="gradient-text">Ease</span></h1>
           <p className="hero-subtitle">Report. Track. Resolve — all in one place.</p>
           <button className="glow-btn" onClick={() => navigate("/login")}>
             Get Started →
@@ -88,7 +88,7 @@ function Home() {
           </div>
           <div className="glass-card image-card">
             <img
-              src="https://png.pngtree.com/png-clipart/20241112/original/pngtree-college-or-university-students-transparent-free-png-image_16966036.png"
+              src="https://portal.usep.edu.ph/static/media/LoginCover2.9527d6ec.png"
               alt="campus students"
             />
           </div>
@@ -139,11 +139,7 @@ function Home() {
           </div>
         </section>
 
-        {/* PORTAL BUTTONS */}
-        <section className="portal-buttons">
-          <button onClick={() => navigate("/login")}>Student Portal</button>
-          <button onClick={() => navigate("/login")}>Admin Portal</button>
-        </section>
+        
 
       </main>
 
